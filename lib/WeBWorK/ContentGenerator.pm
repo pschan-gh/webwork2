@@ -407,98 +407,13 @@ sub addmessage {
 	    script => 0,
 	    comment => 0
 	    );
-	# $scrubber->default(
-	#     undef,
-	#     {
-	# 	'*' => 1,
-	#     }
-	#     );
-
-	# from https://www.perlmonks.org/index.pl?node_id=251427
 	$scrubber->default(
-	undef,
-	{
-		'*' => 1,
-		'onabort' => 0,
-		'onactivate' => 0,
-		'onafterprint' => 0,
-		'onafterupdate' => 0,
-		'onbeforeactivate' => 0,
-		'onbeforecopy' => 0,
-		'onbeforecut' => 0,
-		'onbeforedeactivate' => 0,
-		'onbeforeeditfocus' => 0,
-		'onbeforepaste' => 0,
-		'onbeforeprint' => 0,
-		'onbeforeunload' => 0,
-		'onbeforeupdate' => 0,
-		'onblur' => 0,
-		'onbounce' => 0,
-		'oncellchange' => 0,
-		'onchange' => 0,
-		'onclick' => 0,
-		'oncontextmenu' => 0,
-		'oncontrolselect' => 0,
-		'oncopy' => 0,
-		'oncut' => 0,
-		'ondataavailable' => 0,
-		'ondatasetchanged' => 0,
-		'ondatasetcomplete' => 0,
-		'ondblclick' => 0,
-		'ondeactivate' => 0,
-		'ondrag' => 0,
-		'ondragend' => 0,
-		'ondragenter' => 0,
-		'ondragleave' => 0,
-		'ondragover' => 0,
-		'ondragstart' => 0,
-		'ondrop' => 0,
-		'onerror' => 0,
-		'onerrorupdate' => 0,
-		'onfilterchange' => 0,
-		'onfinish' => 0,
-		'onfocus' => 0,
-		'onfocusin' => 0,
-		'onfocusout' => 0,
-		'onhelp' => 0,
-		'onkeydown' => 0,
-		'onkeypress' => 0,
-		'onkeyup' => 0,
-		'onlayoutcomplete' => 0,
-		'onload' => 0,
-		'onlosecapture' => 0,
-		'onmousedown' => 0,
-		'onmouseenter' => 0,
-		'onmouseleave' => 0,
-		'onmousemove' => 0,
-		'onmouseover' => 0,
-		'onmouseout' => 0,
-		'onmouseup' => 0,
-		'onmousewheel' => 0,
-		'onmove' => 0,
-		'onmoveend' => 0,
-		'onmovestart' => 0,
-		'onpaste' => 0,
-		'onpropertychange' => 0,
-		'onreadystatechange' => 0,
-		'onreset' => 0,
-		'onresize' => 0,
-		'onresizeend' => 0,
-		'onresizestart' => 0,
-		'onrowenter' => 0,
-		'onrowexit' => 0,
-		'onrowsdelete' => 0,
-		'onrowsinserted' => 0,
-		'onscroll' => 0,
-		'onselect' => 0,
-		'onselectionchange' => 0,
-		'onselectstart' => 0,
-		'onstart' => 0,
-		'onstop' => 0,
-		'onsubmit' => 0,
-		'onunload'  => 0
-	}
-	);
+	    undef,
+	    {
+		'*' => 0,
+		'class' => 1 #pschan
+	    }
+	    );
 
 	$message = $scrubber->scrub($message);
 	$self->{status_message} .= $message;
@@ -2286,97 +2201,13 @@ sub warningOutput($$) {
 	    script => 0,
 	    comment => 0
 	    );
-	# $scrubber->default(
-	#     undef,
-	#     {
-	# 	'*' => 1,
-	#     }
-	#     );
-	# from https://www.perlmonks.org/index.pl?node_id=251427
 	$scrubber->default(
-	undef,
-	{
-		'*' => 1,
-		'onabort' => 0,
-		'onactivate' => 0,
-		'onafterprint' => 0,
-		'onafterupdate' => 0,
-		'onbeforeactivate' => 0,
-		'onbeforecopy' => 0,
-		'onbeforecut' => 0,
-		'onbeforedeactivate' => 0,
-		'onbeforeeditfocus' => 0,
-		'onbeforepaste' => 0,
-		'onbeforeprint' => 0,
-		'onbeforeunload' => 0,
-		'onbeforeupdate' => 0,
-		'onblur' => 0,
-		'onbounce' => 0,
-		'oncellchange' => 0,
-		'onchange' => 0,
-		'onclick' => 0,
-		'oncontextmenu' => 0,
-		'oncontrolselect' => 0,
-		'oncopy' => 0,
-		'oncut' => 0,
-		'ondataavailable' => 0,
-		'ondatasetchanged' => 0,
-		'ondatasetcomplete' => 0,
-		'ondblclick' => 0,
-		'ondeactivate' => 0,
-		'ondrag' => 0,
-		'ondragend' => 0,
-		'ondragenter' => 0,
-		'ondragleave' => 0,
-		'ondragover' => 0,
-		'ondragstart' => 0,
-		'ondrop' => 0,
-		'onerror' => 0,
-		'onerrorupdate' => 0,
-		'onfilterchange' => 0,
-		'onfinish' => 0,
-		'onfocus' => 0,
-		'onfocusin' => 0,
-		'onfocusout' => 0,
-		'onhelp' => 0,
-		'onkeydown' => 0,
-		'onkeypress' => 0,
-		'onkeyup' => 0,
-		'onlayoutcomplete' => 0,
-		'onload' => 0,
-		'onlosecapture' => 0,
-		'onmousedown' => 0,
-		'onmouseenter' => 0,
-		'onmouseleave' => 0,
-		'onmousemove' => 0,
-		'onmouseover' => 0,
-		'onmouseout' => 0,
-		'onmouseup' => 0,
-		'onmousewheel' => 0,
-		'onmove' => 0,
-		'onmoveend' => 0,
-		'onmovestart' => 0,
-		'onpaste' => 0,
-		'onpropertychange' => 0,
-		'onreadystatechange' => 0,
-		'onreset' => 0,
-		'onresize' => 0,
-		'onresizeend' => 0,
-		'onresizestart' => 0,
-		'onrowenter' => 0,
-		'onrowexit' => 0,
-		'onrowsdelete' => 0,
-		'onrowsinserted' => 0,
-		'onscroll' => 0,
-		'onselect' => 0,
-		'onselectionchange' => 0,
-		'onselectstart' => 0,
-		'onstart' => 0,
-		'onstop' => 0,
-		'onsubmit' => 0,
-		'onunload'  => 0
-	}
-	);
+	    undef,
+	    {
+		'*' => 0,
+		'class' => 1 # pschan
+	    }
+	    );
 
 	foreach my $warning (@warnings) {
             # Since these warnings have html they look better scrubbed
