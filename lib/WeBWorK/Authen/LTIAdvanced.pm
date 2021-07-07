@@ -612,11 +612,11 @@ sub create_user {
 	}
 	# Initialize global achievement data
 	my $globalUserAchievement = $db->newGlobalUserAchievement();
-        $globalUserAchievement->user_id($userID);
-        $globalUserAchievement->achievement_points(0);
-        $db->addGlobalUserAchievement($globalUserAchievement);
+	$globalUserAchievement->user_id($userID);
+	$globalUserAchievement->achievement_points(0);
+	$db->addGlobalUserAchievement($globalUserAchievement);
 
-  # Give schools the chance to modify newly added sets 
+  # Give schools the chance to modify newly added sets
   if (defined($ce->{LTI_modify_user_set})) {
     foreach my $globalSet (@setsToAssign) {
       my $userSet = $db->getUserSet($userID,$globalSet->set_id);
