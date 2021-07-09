@@ -43,9 +43,9 @@ FROM alpine/git AS base
 
 # To use the master branches of webwork2 and pg 
 ARG WEBWORK2_GIT_URL=https://github.com/openwebwork/webwork2.git
-ARG WEBWORK2_BRANCH=master
+ARG WEBWORK2_BRANCH=develop
 ARG PG_GIT_URL=https://github.com/openwebwork/pg.git
-ARG PG_BRANCH=master
+ARG PG_BRANCH=develop
 
 # assign the build args to the ENV variables
 ENV WEBWORK2_GIT_URL_ENV ${WEBWORK2_GIT_URL}
@@ -148,6 +148,8 @@ RUN apt-get update \
 	libpath-class-perl \
 	libphp-serialization-perl \
 	libxml-simple-perl \
+	libnet-https-nb-perl \
+	libhttp-async-perl \
 	libsoap-lite-perl \
 	libsql-abstract-perl \
 	libstring-shellquote-perl \

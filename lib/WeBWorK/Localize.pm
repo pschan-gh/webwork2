@@ -289,6 +289,16 @@ my $ConfigStrings = [
 		doc2 => x('The default number of attempts before the problem is re-randomized. ( 0 => never )'),
 		type => 'number'
 	},
+	{	var => 'pg{options}{showCorrectOnRandomize}',
+		doc => 'Show the correct answer to the current problem before re-randomization.',
+		doc2 => 'Show the correct answer to the current problem on the last attempt before a new version is requestion.',
+		type => 'boolean'
+	},
+    { var => 'showAnswerLog',
+      doc => x('Enable Experimental Answer Log'),
+      doc2 => x('Answer Log.'),
+      type => 'boolean'
+      },
  	],		  
 	[x('Permissions'),
 		{ var => 'permissionLevels{login}',
